@@ -26,6 +26,8 @@ public class RobotMap {
     //Solenoids
     public static final int shiftLeftSolenoid = 1;
     public static final int shiftRightSolenoid = 2;
+    public static final int deshiftLeftSolenoid = 3;
+    public static final int deshiftRightSolenoid = 4;
     
     //Relays
     public static final int compressorRelay = 1;
