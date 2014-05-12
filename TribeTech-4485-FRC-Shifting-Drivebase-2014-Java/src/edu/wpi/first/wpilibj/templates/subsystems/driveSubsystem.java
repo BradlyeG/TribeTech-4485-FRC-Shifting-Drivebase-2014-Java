@@ -25,6 +25,8 @@ public class driveSubsystem extends Subsystem {
     RobotDrive driveTrain = new RobotDrive(frontLeft, backLeft, frontRight, backRight);
     Solenoid leftShifter = new Solenoid(RobotMap.shiftLeftSolenoid);
     Solenoid rightShifter = new Solenoid(RobotMap.shiftRightSolenoid);
+    Solenoid leftDeShifter = new Solenoid(RobotMap.deshiftLeftSolenoid);
+    Solenoid rightDeShifter = new Solenoid(RobotMap.deshiftRightSolenoid);
     
     
     
@@ -45,11 +47,15 @@ public class driveSubsystem extends Subsystem {
     public void shiftGears(){
         leftShifter.set(true);
         rightShifter.set(true);
+        rightDeShifter.set(false);
+        leftDeShifter.set(false);
     }
     
     public void deshiftGears(){
         leftShifter.set(false);
         rightShifter.set(false);
+        leftDeShifter.set(true);
+        rightDeShifter.set(true);
     }
     
     
